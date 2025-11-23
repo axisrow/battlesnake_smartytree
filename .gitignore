@@ -32,6 +32,22 @@ pom.xml.versionsBackup
 .DS_Store
 profile
 
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+._.Trashes
+.VolumeIcon.icns
+.apdisk
+Thumbs.db
+# macOS metadata in VCS
+.fseventsd
+.TemporaryItems
+
 # IntelliJ Idea
 .idea/
 *.iws
@@ -91,6 +107,14 @@ MANIFEST
 venv/
 ENV/
 env/
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+pip-wheel-metadata/
+.tox/
+.nox/
 
 # Other
 *~
