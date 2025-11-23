@@ -1,0 +1,12 @@
+
+app:
+  snake:
+    name: SmartyTree
+    color: "#3d3172"
+    head: trans-rights-scarf
+    tail: mouse
+    strategy: FindFood
+
+server:
+  port: 8080
+  host: 0.0.0.0
