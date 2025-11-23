@@ -8,25 +8,11 @@ class Direction(Enum):
     LEFT = 3
     RIGHT = 4
 
-    _DIRECTION_TO_OFFSET = {
-        1: Point(0, 1),   # UP
-        2: Point(0, -1),  # DOWN
-        3: Point(-1, 0),  # LEFT
-        4: Point(1, 0)    # RIGHT
-    }
-
-    _DIRECTION_TO_STRING = {
-        1: "up",
-        2: "down",
-        3: "left",
-        4: "right"
-    }
-
     def offset(self) -> Point:
-        return self._DIRECTION_TO_OFFSET[self.value]
+        return _DIRECTION_TO_OFFSET[self]
 
     def __str__(self) -> str:
-        return self._DIRECTION_TO_STRING[self.value]
+        return _DIRECTION_TO_STRING[self]
 
     def rotate_clockwise(self) -> 'Direction':
         rotation_map = {
@@ -54,3 +40,18 @@ class Direction(Enum):
             Direction.RIGHT: Direction.LEFT
         }
         return inversion_map[self]
+
+
+_DIRECTION_TO_OFFSET = {
+    Direction.UP: Point(0, 1),
+    Direction.DOWN: Point(0, -1),
+    Direction.LEFT: Point(-1, 0),
+    Direction.RIGHT: Point(1, 0),
+}
+
+_DIRECTION_TO_STRING = {
+    Direction.UP: "up",
+    Direction.DOWN: "down",
+    Direction.LEFT: "left",
+    Direction.RIGHT: "right",
+}

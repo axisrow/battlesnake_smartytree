@@ -22,7 +22,6 @@ class Context:
         )
 
     def find_move(self, strategy) -> Direction:
-        from snake.strategy.strategy import Strategy
         return strategy.find_move(self)
 
     def state(self) -> GameStateContext:

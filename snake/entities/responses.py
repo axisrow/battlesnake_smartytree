@@ -3,7 +3,7 @@ from snake.direction import Direction
 
 class DetailsResponse:
     API_VERSION = "1"
-    AUTHOR = "Serhii Zasenko"
+    AUTHOR = "Serhii Zasenko Python port"
     VERSION = "1.0.0"
     DEFAULT_SKIN = "default"
     DEFAULT_NAME = "Unnamed"

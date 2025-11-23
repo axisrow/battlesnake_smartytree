@@ -5,7 +5,6 @@ from snake.graph.directed_edge import DirectedEdge
 
 if TYPE_CHECKING:
     from snake.context.board_context import BoardContext
-    from snake.context.context import Context
 
 
 class Graph:
@@ -19,9 +18,7 @@ class Graph:
         self.hazards: Dict[int, int] = {}
 
     @staticmethod
-    def create_generic_game_graph(context: 'Context') -> 'Graph':
-        from snake.context.context import Context
-
+    def create_generic_game_graph(context) -> 'Graph':
         game_state_context = context.state()
         graph = Graph(context.board(), game_state_context.hazard_damage)
 
@@ -43,7 +40,7 @@ class Graph:
         return graph
 
     @staticmethod
-    def create_food_hazard_graph(ctx: 'Context') -> 'Graph':
+    def create_food_hazard_graph(ctx) -> 'Graph':
         graph = Graph(ctx.board(), ctx.state().hazard_damage)
 
         for p in ctx.state().food:

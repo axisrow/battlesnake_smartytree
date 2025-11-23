@@ -6,8 +6,6 @@ from snake.graph.dijkstra import Dijkstra
 
 class VoronoiDiagram:
     def __init__(self, ctx):
-        from snake.context.context import Context
-
         self.snakes_areas: Dict[str, Set[Point]] = {}
 
         for snake in ctx.state().snakes:
@@ -16,8 +14,6 @@ class VoronoiDiagram:
         self._build_voronoi_diagram(ctx)
 
     def _build_voronoi_diagram(self, ctx):
-        from snake.context.context import Context
-
         g = ctx.board_graph()
         dijkstras = [Dijkstra(g, snake.head()) for snake in ctx.state().snakes]
 

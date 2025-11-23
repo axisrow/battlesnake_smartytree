@@ -1,7 +1,5 @@
 from typing import List, Set
 from snake.direction import Direction
-from snake.point import Point
-from snake.entities.snake import Snake
 from snake.graph.cc import CC
 from snake.strategy.filter.strategy_filter import StrategyFilter
 
